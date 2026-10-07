@@ -26,7 +26,7 @@ public class CsvBookSource implements BookSource {
                 .filter(line -> !line.isBlank())
                 .map(line -> {
                     String[] parts = line.split(";");
-                    return new Book(parts[0], Integer.parseInt(parts[1]));
+                    return new Book(parts[0], parts[1], Integer.parseInt(parts[2]));
                 })
                 .toList();
     }

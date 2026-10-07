@@ -8,8 +8,8 @@ class BookTest {
 
     @Test
     void recordsWithSameValuesAreEqual() {
-        Book x = new Book("Clean Code", 464);
-        Book y = new Book("Clean Code", 464);
+        Book x = new Book("Clean Code", "Robert C. Martin", 464);
+        Book y = new Book("Clean Code", "Robert C. Martin", 464);
 
         assertEquals(x, y);
         assertEquals(x.hashCode(), y.hashCode());
@@ -17,8 +17,8 @@ class BookTest {
 
     @Test
     void keepsBehaviouralMethod() {
-        Book longBook = new Book("Clean Code", 464);
-        Book shortBook = new Book("Short Book", 100);
+        Book longBook = new Book("Clean Code", "Robert C. Martin", 464);
+        Book shortBook = new Book("Short Book", "Test Author", 100);
 
         assertTrue(longBook.isLong());
         assertFalse(shortBook.isLong());
